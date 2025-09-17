@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:800");
+
+.end-section {
+  position: relative;
+  width: 100%;
+  height: 300px; /* adjust as needed */
+  overflow: hidden;
+  background: #44a7edff; /* fallback color */
+}
+
+/* wave stays at the back */
+.wave-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 0; /* behind text */
+}
+
+/* text stays in front */
+.end-text {
+  position: relative;
+  z-index: 2; /* above wave */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.end-text svg {
+  transform: scale(0.6);
+}
+
+
+
+/* wave stays at background */
+.wave-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 1;
+}
+
+.subtitle {
+  font-weight: bolder;
+  font-size: 20px;
+  /* font-family: "Open Sans", sans-serif; */
+  fill: black; 
+    font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+}
+
+.name-text {
+  font-size: 80px;
+  /* font-family: "Open Sans", Impact, sans-serif; */
+  text-transform: uppercase;
+}
+
+.text {
+  fill: none;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 350;
+  stroke-dashoffset: 0;
+  animation: stroke 6s infinite linear;
+}
+
+use.text:nth-of-type(1) {
+  stroke: #a5acf3;
+  animation-delay: -1.2s;
+}
+use.text:nth-of-type(2) {
+  stroke: #a9d4f9;
+  animation-delay: -2.4s;
+}
+use.text:nth-of-type(3) {
+  stroke: #e9f1df;
+  animation-delay: -3.6s;
+}
+use.text:nth-of-type(4) {
+  stroke: #8ee0f9;
+  animation-delay: -4.8s;
+}
+use.text:nth-of-type(5) {
+  stroke: #72f2bd;
+  animation-delay: -6s;
+}
+
+@keyframes stroke {
+  to {
+    stroke-dashoffset: -400;
+  }
+}
+
